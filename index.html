@@ -1,30 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utility.css">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <title>Spotify</title>
+  </head>
+  <body>
     <div class="container flex bg-black">
-        <div class="left ">
-            <div class="home bg-gray m-1 rounded p-1">
-                <div class="logo"><img class="invert elo" src="log.png" alt=""></div>
-                <ul>
-                    <li><img class="invert el" src="home.png" alt="" srcset="">Home</li>
-                    <li><img class="invert el" src="search.png" alt="" srcset="">Search</li>
-                </ul>
+      <div class="left">
+        <div class="home bg-gray m-1 rounded p-1">
+          <div class="logo">
+            <img class="invert elo" src="log.png" alt="" />
+          </div>
+          <ul>
+            <li>
+              <img class="invert el" src="home.png" alt="" srcset="" />Home
+            </li>
+            <li>
+              <img class="invert el" src="search.png" alt="" srcset="" />Search
+            </li>
+          </ul>
+        </div>
+        <div class="library bg-gray m-1 rounded p-1">
+          <div class="heading">
+            <img class="invert elo" src="playlist.png" alt="" srcset="" />
+            <h2>Your Library</h2>
+          </div>
+          <div class="footer">
+            <div><a href="https://www.spotify.com/in-en/legal/">Legal</a></div>
+            <div>
+              <a href="https://www.spotify.com/in-en/safetyandprivacy/"
+                >Safety & Privacy Center</a
+              >
             </div>
-            <div class="library bg-gray m-1 rounded p-1">
-                Your Library
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/"
+                >Privacy Policy</a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/cookies-policy/"
+                >Cookies</a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
+                >About Ads</a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/accessibility/"
+                >Accessibility</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right bg-gray rounded">
+        <div class="header">
+            <div class="nav invert">
+                <img class="icon" src="right.png" alt="">
+                <img class="icon" src="left.png" alt="">
+
+            </div>
+            <div class="buttons">
+                <button class="signupbtn">SignUp</button>
+                <button class="loginbtn">Log in</button>
             </div>
         </div>
-        <div class="right border">
-            vfdgfbmbj,nk
+        <div class="playlist">
+            <h1>Spotify Playlist</h1>
+            <div class="cardContainer">
+                <div class="card">
+                    <div class="play">
+                        <img class="invert" src="play.png" alt="">
+                    </div>
+                    <img src="https://i.scdn.co/image/ab67706f0000000249a1ed33d2ca64e6a5d0e550" alt="">
+                    <h2>Happy Hits</h2>
+                    <p>Hits to boost your mood and fill with happiness</p>
+                </div>
+                <div class="card">
+                    <div class="play">
+                        <img class="invert" src="play.png" alt="">
+                    </div>
+                    <img src="https://i.scdn.co/image/ab67706f0000000249a1ed33d2ca64e6a5d0e550" alt="">
+                    <h2>Happy Hits</h2>
+                    <p>Hits to boost your mood and fill with happiness</p>
+                </div>
+                <div class="card">
+                    <div class="play">
+                        <img class="invert" src="play.png" alt="">
+                    </div>
+                    <img src="https://i.scdn.co/image/ab67706f0000000249a1ed33d2ca64e6a5d0e550" alt="">
+                    <h2>Happy Hits</h2>
+                    <p>Hits to boost your mood and fill with happiness</p>
+                </div>
+                <div class="card">
+                    <div class="play">
+                        <img class="invert" src="play.png" alt="">
+                    </div>
+                    <img src="https://i.scdn.co/image/ab67706f0000000249a1ed33d2ca64e6a5d0e550" alt="">
+                    <h2>Happy Hits</h2>
+                    <p>Hits to boost your mood and fill with happiness</p>
+                </div>
+                <div class="card">
+                    <div class="play">
+                        <img class="invert" src="play.png" alt="">
+                    </div>
+                    <img src="https://i.scdn.co/image/ab67706f0000000249a1ed33d2ca64e6a5d0e550" alt="">
+                    <h2>Happy Hits</h2>
+                    <p>Hits to boost your mood and fill with happiness</p>
+                </div>
+                
+            </div>
+            <div class="playbar">
+                <div class="songInfo"></div>
+                <div class="songbtn">
+                    <img src="prev.png" alt="">
+                    <img src="play.png" alt="">
+                    <img src="next.png" alt="">
+                </div>
+                <div class="songtime"></div>
+            </div>
         </div>
     </div>
-    
-</body>
+    </div>
+  </body>
 </html>

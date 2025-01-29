@@ -172,7 +172,7 @@ body {
     width: auto;
 }
 .songbtn img {
-    height: 60px;
+    height: 50px;
 }
 .songsList {
     height: 544px;
@@ -233,4 +233,12 @@ body {
     bottom: 6px;
     left: 0%;
     transition: left 0.5s;
+}
+.songInfo .songtime{
+    color: black;
+}
+.abovebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

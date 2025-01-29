@@ -1,5 +1,17 @@
 console.log("javascript..");
 
+let currentSong = new Audio()
+
+function formatTime(seconds) {
+    let minutes = Math.floor(seconds / 60);
+    let secs = Math.floor(seconds % 60);
+    
+    // Pad with leading zeros if needed
+    let formattedTime = `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    
+    return formattedTime;
+}
+
 async function getSongs() {
     let a = await fetch('http://127.0.0.1:5500/songs/');
     let response = await a.text();
@@ -19,7 +31,20 @@ async function getSongs() {
     return songs;
 }
 
+const playMusic = (track) => {
+    
+    // let audio = new Audio("/songs/" + track)
+    currentSong.src = "/songs/" + track
+    currentSong.play();
+    play.src = "pause.png"
+    document.querySelector(".songInfo").innerHTML = track
+    document.querySelector(".songtime").innerHTML = "00:00 / 00:00"
+
+}  
+
+
 async function main() {
+    
     let songs = await getSongs();
     console.log(songs);
     //show all songs in playlist
@@ -37,8 +62,31 @@ async function main() {
     }
 
     Array.from(document.querySelector(".songsList").getElementsByTagName("li")).forEach(e => {
-        console.log(e.target.getElementsByTagName("div")[0])
-    });
+        e.addEventListener("click", element => {
+            console.log(e.querySelector(".info").firstElementChild.innerHTML)
+            playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
+        })
+        
+    }); 
+
+    play.addEventListener("click", () => {
+        if(currentSong.paused) {
+            currentSong.play()
+            play.src = "pause.png"
+        }
+        else {
+            currentSong.pause()
+            play.src = "play.png"
+        }
+    })
+    previous.addEventListener("click", () => {
+
+    })
+
+    currentSong.addEventListener("timeupdate", () => {
+        console.log(currentSong.currentTime, currentSong.duration);
+        document.querySelector(".songtime").innerHTML = `${formatTime(currentSong.currentTime)}/${formatTime(currentSong.duration)}`
+    })
      
     // Play the first song
     // var audio = new Audio('http://127.0.0.1:5500/songs/' + songs[0]);
